@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>570</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>570</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>个人消费记账统计与分析系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../image/loginLog.png</normaloff>../image/loginLog.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>681</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="account_page">
+     <widget class="QTableWidget" name="accounttableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>661</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string>序列</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>订单编号</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>时间</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>消费类型</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>金额（元）</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>531</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>范围搜索</string>
+      </property>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>10</y>
+         <width>31</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;至&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>    至</string>
+       </property>
+      </widget>
+      <widget class="QDateTimeEdit" name="enddate">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>20</y>
+         <width>123</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QDateTimeEdit" name="startdate">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>123</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>15</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>餐饮</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>购物</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>日用</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>交通</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>娱乐</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="searchbutton">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../image/search.png</normaloff>../image/search.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="resetting">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../image/refresh.png</normaloff>../image/refresh.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="usernameLabe">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>251</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;用户：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;用户：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>用户：</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="insertAccount">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>40</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>添加账单</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../image/add-circle.png</normaloff>../image/add-circle.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>18</width>
+        <height>18</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>450</y>
+        <width>291</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,0,0,2,0">
+       <item>
+        <widget class="QPushButton" name="previousPage">
+         <property name="text">
+          <string>上一页</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../image/direction-left.png</normaloff>../image/direction-left.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pagelineEdit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="pagelabel">
+         <property name="text">
+          <string>/共页</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pagepushButton">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../image/skip.png</normaloff>../image/skip.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>18</width>
+           <height>18</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="nextPage">
+         <property name="text">
+          <string>下一页</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../image/direction-right.png</normaloff>../image/direction-right.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="deleteButton">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>70</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>删除账单</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../image/ashbin.png</normaloff>../image/ashbin.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>18</width>
+        <height>18</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>layoutWidget</zorder>
+     <zorder>groupBox</zorder>
+     <zorder>accounttableWidget</zorder>
+     <zorder>usernameLabe</zorder>
+     <zorder>insertAccount</zorder>
+     <zorder>deleteButton</zorder>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QScrollArea" name="scrollAreaType">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>681</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>679</width>
+         <height>419</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>681</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>搜索框</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>31</y>
+         <width>441</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>请输入年份：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="yearlineEdit_2"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>请输入月份：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="monthlineEdit_2"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="yearmonthButton_2">
+          <property name="text">
+           <string>提交</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../image/search.png</normaloff>../image/search.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>18</width>
+            <height>18</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>（月份可为空）</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page">
+     <widget class="QScrollArea" name="scrollAreaPrice">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>681</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>679</width>
+         <height>419</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>681</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>搜索框</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>31</y>
+         <width>441</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>请输入年份：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="yearlineEdit"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>请输入月份：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="monthlineEdit"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="yearmonthButton">
+          <property name="text">
+           <string>提交</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../image/search.png</normaloff>../image/search.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>18</width>
+            <height>18</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>（月份可为空）</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>主界面</string>
+    </property>
+    <addaction name="actionsaccount"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>关于</string>
+    </property>
+    <addaction name="actionupdateUser"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>分析</string>
+    </property>
+    <addaction name="accounttype"/>
+    <addaction name="accountprice"/>
+    <addaction name="actionbudget"/>
+    <addaction name="actionxiugaibudget"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionshangchuan"/>
+    <addaction name="actionxiazai"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionsaccount"/>
+   <addaction name="actionshangchuan"/>
+   <addaction name="actionxiazai"/>
+   <addaction name="actionbudget"/>
+   <addaction name="accounttype"/>
+   <addaction name="accountprice"/>
+   <addaction name="actionupdateUser"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <action name="actionsaccount">
+   <property name="icon">
+    <iconset>
+     <normaloff>../image/home.png</normaloff>../image/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>账单明细</string>
+   </property>
+  </action>
+  <action name="actionbb">
+   <property name="text">
+    <string>版本号</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>../image/sign-out.png</normaloff>../image/sign-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="accounttype">
+   <property name="icon">
+    <iconset>
+     <normaloff>../image/chart-pie.png</normaloff>../image/chart-pie.png</iconset>
+   </property>
+   <property name="text">
+    <string>消费类型分析</string>
+   </property>
+  </action>
+  <action name="accountprice">
+   <property name="icon">
+    <iconset>
+     <normaloff>../image/chart-bar.png</normaloff>../image/chart-bar.png</iconset>
+   </property>
+   <property name="text">
+    <string>消费金额分析</string>
+   </property>
+  </action>
+  <action name="actionshangchuan">
+   <property name="icon">
+    <iconset>
+     <normaloff>../image/upload.png</normaloff>../image/upload.png</iconset>
+   </property>
+   <property name="text">
+    <string>账单上传</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionxiazai">
+   <property name="icon">
+    <iconset>
+     <normaloff>../image/download.png</normaloff>../image/download.png</iconset>
+   </property>
+   <property name="text">
+    <string>账单下载</string>
+   </property>
+  </action>
+  <action name="actionbudget">
+   <property name="icon">
+    <iconset>
+     <normaloff>../image/budget.png</normaloff>../image/budget.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加本月预算</string>
+   </property>
+  </action>
+  <action name="actionxiugaibudget">
+   <property name="text">
+    <string>修改本月预算</string>
+   </property>
+  </action>
+  <action name="actionupdateUser">
+   <property name="icon">
+    <iconset>
+     <normaloff>../image/updateuser.png</normaloff>../image/updateuser.png</iconset>
+   </property>
+   <property name="text">
+    <string>修改个人信息</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
